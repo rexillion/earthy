@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Earth Hour</title>
+    <link rel="shortcut icon" type="image/png" href="earthy.png"/>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div class="top-info">
+    <img src="nasa-Q1p7bh3SHj8-unsplash.jpg" alt="image" style="width:100%;height:600px;">
+    <h1 class="centered2"style="color:#FFFFFF;font-size:55px">Τι είναι το earth hour?</h1>
+    <h3 class="border, centered1"style="background-color:#000000;border: 8px solid #000000;"> Το earth hour είναι μία συμβολική πράξη που συμβαίνει σε όλο το κόσμο στις 8:30 με τις 9:30 το τελευταίο Σάββατο του Μαρτίου, στην τοπική ώρα της κάθε χώρας </h3>
+    </div>
+    <br>
+    <br>
+    <br>
+    <span class="border" style="text-align: center;background-color:#D7D7D7; font-size:40px"><b id="countdown">Το επόμενο earth hour είναι σε...</b></span>
+    <br><br><br><br><a style="font-size:28px;text-decoration: none;" href="tips.html">Τρόποι που μπορείτε και εσείς να βοηθήσετε</a><br><br>
+    <div class="column">
+    <span style="font-size:28px;">Τι είναι η κλιματική αλλαγή και γιατί συμβαίνει;<br></span>
+    <span style="text-align: left; font-size:17px;">Διάφορα χημικά στην ατμόσφαιρα που έχουμε δημιουργήσει τα 150 τελευταία<br>
+      χρόνια (κυρίως το CO2) το αντί να αφήνουν τις ακτίνες του ηλίου να περνάνε,<br>
+      αλλά όχι να βγαίνουν έξω όπως κανονικά. Αυτό φυλακίζει μέσα στην<br>
+      ατμόσφαιρα τις ακτίνες. Αυτό ονομάζετε φαινόμενο του θερμοκηπίου και<br>
+      οι ακτίνες που παγιδεύονται μέσα στην ατμόσφαιρα και αντανακλούντε.<br>
+      Βασικά δημιουργούμε μια παγίδα για την γη.<br><br><img src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8dHJlZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="image"><Br>
+    </span>  </div>
+<div class="column">
+
+    <span class="right"style="font-size:28px;">Από που προέρχονται τα χημικά στην ατμόσφαιρα;<br></span>
+    <span style="text-align: left; font-size:17px;">- Το 87% όλων τον χημικών που έχουμε δημιουργήσει εμείς είναι λόγω καύσης πηγών ενέργειας όπως πετρέλαιο,<br> κάρβουνο και άλλα που χρησιμοποιούνται στα εργοστάσια.<br> Ο καπνός που βλέπουμε είναι το διοξείδιο του άνθρακα που ανεβαίνει για να ενισχύσει αυτό το φαινόμενο της κλιματικής αλλαγής.<br>
+-Το άλλο 9% προέρχεται από αλλαγές που κάνουμε εμείς στο περιβάλλον όπως το να κάνουμε ανασκαφές.<br>
+-Το 4% όλων των χημικών έρχονται από τα εργοστάσια που ανέφερα στο παραπάνω.<br>
+-Κάποια από τα πράγματα που κάνουμε και δεν δημιουργούν νέο διοξείδιο του άνθρακα,<br> αλλά μειώνουν την ποσότητα του.<br> Ο κύριος παράγοντας είναι τα δέντρα και εάν τα κόβουμε και αυτό μετράει κατά κάποιον τρόπο.
+<br></span><br> <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2xpbWF0ZSUyMGNoYW5nZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="image"> <br>
+</div>
+<br><a style="text-decoration: none;" href="links.html">Πηγές</a><div>
+    <script type="text/javascript">
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    var currentYear  = new Date().getFullYear();
+
+    function getLastSunday(year, month) {
+      let d = new Date(year, month, 0);
+      d.setDate((d.getDate() - d.getDay()) - 1);
+      console.log(d.toDateString());
+      return d.toDateString();
+    }
+
+    // Set the date we're counting down to
+var countDownDate = new Date(`${getLastSunday(currentYear, 3)} 20:30:00`).getTime();
+
+var distance = countDownDate - now;
+
+if (distance < 0) {
+  var currentYear = currentYear + 1;
+  var countDownDate = new Date(`${getLastSunday(currentYear, 3)} 20:30:00`).getTime();
+}
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+// Get today's date and time
+var now = new Date().getTime();
+
+// Find the distance between now and the count down date
+var distance = countDownDate - now;
+
+// Time calculations for days, hours, minutes and seconds
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+// Display the result in the element with id="demo"
+document.getElementById("countdown").innerHTML = "Το επόμενο earth hour είναι σε: " + days + " ημέρες, " + hours + " ώρες, "
++ minutes + " λεπτά και " + seconds + " δευτερόλεπτα!";
+
+// If the count down is finished, write some text
+if (distance < 0) {
+  clearInterval(x);
+  document.getElementById("countdown").innerHTML = "ΝΟW!";
+}
+}, 1000);
+    </script>
+  </body>
+</html>
